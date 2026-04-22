@@ -7,7 +7,7 @@ import type {
   Person,
   ReferenceItem,
   SkillsMap,
-} from "@/types/portfolio.ts"
+} from "@/types/portfolio"
 
 export const PERSON: Person = {
   name: "Tamerlan Kangarli",
@@ -28,7 +28,7 @@ export const PERSON: Person = {
   linkedin: "linkedin.com/in/tamerlankangarli",
   knownFor:
     "Frontend Architecture, Scalable UI Systems, Reusable Component Design",
-  yearsActive: "2024–present",
+  yearsActive: "2023 – present",
   avatarEmoji: "👨‍💻",
 }
 
