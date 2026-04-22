@@ -3,6 +3,8 @@ import { useEffect, useId, useState } from "react"
 import cvUrl from "@/assets/TamerlanKangarliCV.pdf?url"
 import { wiki } from "@/styles/wiki"
 
+import { PdfDocumentViewer } from "./PdfDocumentViewer"
+
 type CvActionsProps = {
   compact?: boolean
 }
@@ -71,11 +73,7 @@ export function CvActions({ compact = false }: CvActionsProps) {
                 Close
               </button>
             </div>
-            <iframe
-              className={wiki.cvViewerFrame}
-              src={`${cvUrl}#toolbar=1&navpanes=0`}
-              title="Tamerlan Kangarli CV"
-            />
+            <PdfDocumentViewer src={cvUrl} />
           </div>
         </div>
       )}

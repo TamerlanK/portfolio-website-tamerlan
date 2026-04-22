@@ -181,46 +181,6 @@ export function WikiPortfolioPage() {
             organizations in the Azerbaijani and international technology sectors.
           </p>
 
-          <SectionHeading id="career-jet" level={3}>
-            JET Academy (May 2023 – Feb 2024)
-          </SectionHeading>
-          <p className={wiki.paragraph}>
-            Kangarli completed his first frontend development internship at{" "}
-            <WikiLink>JET Academy</WikiLink>, where he built a foundation in web interfaces,
-            JavaScript, React, responsive layouts, Git workflows, and practical frontend
-            problem-solving.
-          </p>
-          <ExperienceBullets bullets={EXPERIENCE[3].bullets} />
-
-          <SectionHeading id="career-cic" level={3}>
-            Caspian Innovation Center (Feb 2024 – May 2024)
-          </SectionHeading>
-          <p className={wiki.paragraph}>
-            Kangarli's first professional role was as a Frontend Developer at{" "}
-            <WikiLink>Caspian Innovation Center LLC</WikiLink> in Baku. During this period, he
-            developed and maintained frontend applications for clients in the travel,{" "}
-            <WikiLink>fintech</WikiLink>, and <WikiLink>e-commerce</WikiLink> industries, focusing on
-            clean architecture and cross-device compatibility. He notably achieved first place in a
-            company hackathon by leading frontend development of a feedback management system.
-            <ReferenceLink n={4} />
-          </p>
-          <ExperienceBullets bullets={EXPERIENCE[2].bullets} />
-
-          <SectionHeading id="career-millisoft" level={3}>
-            Millisoft (May 2024 – Jul 2025)
-          </SectionHeading>
-          <p className={wiki.paragraph}>
-            In May 2024, Kangarli joined <WikiLink>Millisoft</WikiLink> as a Frontend Developer,
-            where he led frontend development for over 30 modules within a large-scale{" "}
-            <WikiLink>HR</WikiLink> and Accounting platform. He designed a reusable component system
-            using <WikiLink>Formik</WikiLink> and Yup, and drove performance gains of 30-35% through
-            code splitting and lazy loading strategies.
-            <ReferenceLink n={2} /> He also contributed to the <WikiLink>SOCAR</WikiLink> Downstream
-            website development.
-            <ReferenceLink n={6} />
-          </p>
-          <ExperienceBullets bullets={EXPERIENCE[1].bullets} />
-
           <SectionHeading id="career-andersen" level={3}>
             Andersen Lab (Aug 2025 – Apr 2026)
           </SectionHeading>
@@ -237,6 +197,45 @@ export function WikiPortfolioPage() {
             <ReferenceLink n={8} />
           </p>
           <ExperienceBullets bullets={EXPERIENCE[0].bullets} />
+
+          <SectionHeading id="career-millisoft" level={3}>
+            Millisoft LLC (May 2024 – Jul 2025)
+          </SectionHeading>
+          <p className={wiki.paragraph}>
+            In May 2024, Kangarli joined <WikiLink>Millisoft LLC</WikiLink> as a Frontend Developer,
+            where he owned the development and continuous enhancement of modules within an enterprise{" "}
+            <WikiLink>HR</WikiLink> and Accounting management system. His work included CRUD
+            functionality, real-time search, advanced filtering, reusable type-safe UI components,
+            dynamic forms, React Router navigation, and REST API integration.
+            <ReferenceLink n={2} /> He also contributed to the <WikiLink>SOCAR</WikiLink> Downstream
+            website development.
+            <ReferenceLink n={6} />
+          </p>
+          <ExperienceBullets bullets={EXPERIENCE[1].bullets} />
+
+          <SectionHeading id="career-cic" level={3}>
+            Caspian Innovation Center LLC (Feb 2024 – May 2024)
+          </SectionHeading>
+          <p className={wiki.paragraph}>
+            Kangarli worked as a Frontend Developer at{" "}
+            <WikiLink>Caspian Innovation Center LLC</WikiLink> in Baku. During this period, he built
+            type-safe frontend applications with TypeScript under senior engineering mentorship,
+            rebuilt an exam platform end-to-end, and delivered personal React projects from concept
+            through deployment.
+            <ReferenceLink n={4} />
+          </p>
+          <ExperienceBullets bullets={EXPERIENCE[2].bullets} />
+
+          <SectionHeading id="career-jet" level={3}>
+            JET Academy (May 2023 – Feb 2024)
+          </SectionHeading>
+          <p className={wiki.paragraph}>
+            Kangarli completed his first frontend development internship at{" "}
+            <WikiLink>JET Academy</WikiLink>, building responsive interfaces, React-based projects,
+            and Figma-driven UI implementations while also contributing to a hackathon-winning
+            feedback management system.
+          </p>
+          <ExperienceBullets bullets={EXPERIENCE[3].bullets} />
 
           <div className={wiki.timeline}>
             {EXPERIENCE.map((experience) => (

@@ -102,7 +102,13 @@ export const wiki = {
     "font-['Linux_Libertine',Georgia,Times,serif] text-[18px] font-bold text-[#202122]",
   cvViewerClose:
     "cursor-pointer rounded-[2px] border border-[#a2a9b1] bg-gradient-to-b from-white to-[#eaecf0] px-2.5 py-1 text-[12.5px] text-[#202122] hover:bg-[#eaf3ff]",
-  cvViewerFrame: "min-h-0 flex-1 border-0",
+  cvViewerBody: "min-h-0 flex-1 overflow-y-auto bg-[#eaecf0] p-3",
+  cvViewerStatus:
+    "mb-3 border border-[#c8ccd1] bg-white px-3 py-2 text-center text-[13px] text-[#54595d]",
+  cvViewerPages: "flex flex-col items-center gap-3",
+  cvViewerPage:
+    "max-w-full border border-[#a2a9b1] bg-white p-2 shadow-[0_1px_4px_rgba(0,0,0,0.12)]",
+  cvViewerCanvas: "block max-w-full",
   referencesList:
     "columns-2 gap-6 text-[12.5px] leading-[1.8] max-md:columns-1",
   referenceItem: "mb-0.5 break-inside-avoid",
