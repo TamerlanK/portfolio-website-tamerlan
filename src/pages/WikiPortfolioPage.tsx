@@ -26,6 +26,7 @@ import {
 } from "@/constants/portfolio-data"
 import type { WikiTab } from "@/constants/portfolio-navigation"
 import { useScrollTopVisibility } from "@/hooks/useScrollTopVisibility"
+import { useWikiTheme } from "@/hooks/useWikiTheme"
 import { wiki } from "@/styles/wiki"
 
 const CATEGORIES = [
@@ -92,10 +93,11 @@ export function WikiPortfolioPage() {
   const [tocVisible, setTocVisible] = useState(true)
   const [activeTab, setActiveTab] = useState<WikiTab>("Article")
   const showScrollTop = useScrollTopVisibility()
+  const { setTheme, theme } = useWikiTheme()
 
   return (
-    <div className={wiki.app}>
-      <WikiHeader />
+    <div className={wiki.app} data-theme={theme}>
+      <WikiHeader onThemeChange={setTheme} theme={theme} />
       <WikiTabs active={activeTab} onChange={setActiveTab} />
 
       <main className={wiki.body}>
@@ -323,8 +325,8 @@ export function WikiPortfolioPage() {
           <table className={wiki.compactTable}>
             <thead>
               <tr>
-                <th className={`${wiki.langCell} bg-[#eaecf0] font-bold`}>Language</th>
-                <th className={`${wiki.langCell} bg-[#eaecf0] font-bold`}>Proficiency</th>
+                <th className={wiki.langHeadCell}>Language</th>
+                <th className={wiki.langHeadCell}>Proficiency</th>
               </tr>
             </thead>
             <tbody>
