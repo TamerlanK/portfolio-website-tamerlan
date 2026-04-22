@@ -2,16 +2,18 @@ export const wiki = {
   app: "min-h-screen bg-[var(--wiki-page-bg)] text-[var(--wiki-text)] antialiased font-['Lato',-apple-system,'Segoe_UI',sans-serif] text-sm leading-[1.6] transition-colors duration-150",
   serif: "font-['Linux_Libertine',Georgia,Times,serif]",
   link: "cursor-pointer text-[var(--wiki-link)] no-underline hover:text-[var(--wiki-link-hover)] hover:underline",
+  textHighlight: "font-semibold text-[var(--wiki-text)]",
+  anchorTarget: "scroll-mt-24",
   header:
-    "sticky top-0 z-[100] flex items-center justify-between border-b border-[var(--wiki-border)] bg-[var(--wiki-surface)] px-6 py-2 max-md:flex-col max-md:items-start max-md:gap-2",
-  logoSection: "flex items-center gap-3",
+    "sticky top-0 z-[100] flex items-center justify-between gap-4 border-b border-[var(--wiki-border)] bg-[var(--wiki-surface)] px-6 py-2 max-md:flex-wrap max-md:items-start max-md:gap-2 max-md:px-3.5",
+  logoSection: "flex min-w-0 shrink-0 items-center gap-3",
   logo: "flex h-[50px] w-[50px] items-center justify-center",
   logoGlobe: "text-[38px] grayscale",
   wordmark: "flex flex-col",
   wordmarkTitle:
     "font-['Linux_Libertine',Georgia,Times,serif] text-[19px] leading-[1.1] text-[var(--wiki-text)]",
   wordmarkTagline: "text-[10.5px] italic tracking-[0.02em] text-[var(--wiki-muted-text)]",
-  headerActions: "flex flex-wrap items-center justify-end gap-3 text-xs max-md:justify-start",
+  headerActions: "flex shrink-0 flex-wrap items-center justify-end gap-3 text-xs max-md:justify-start",
   headerLinks: "flex gap-2",
   themeControl:
     "flex items-center overflow-hidden rounded-[2px] border border-[var(--wiki-border-strong)] bg-[var(--wiki-page-bg)]",
@@ -25,13 +27,14 @@ export const wiki = {
   tab: "mr-[-1px] cursor-pointer rounded-t-[2px] border border-b-0 border-[var(--wiki-border-strong)] bg-[var(--wiki-tab-bg)] px-3.5 py-1.5 text-[12.5px] text-[var(--wiki-link)] transition-colors hover:bg-[var(--wiki-tab-hover)]",
   activeTab:
     "border-b border-b-[var(--wiki-surface)] bg-[var(--wiki-surface)] font-bold text-[var(--wiki-text)] hover:bg-[var(--wiki-surface)]",
-  searchContainer: "relative mb-1.5",
+  searchContainer:
+    "relative flex min-w-[220px] max-w-[420px] flex-1 items-center max-md:order-3 max-md:w-full max-md:max-w-none",
   searchInput:
-    "w-[220px] rounded-[2px] border border-[var(--wiki-border-strong)] bg-[var(--wiki-surface)] px-2 py-1 text-[13px] text-[var(--wiki-text)] outline-none transition-colors placeholder:text-[var(--wiki-muted-text)] focus:border-[var(--wiki-link-hover)]",
+    "min-w-0 flex-1 rounded-[2px] border border-[var(--wiki-border-strong)] bg-[var(--wiki-surface)] px-2 py-1 text-[13px] text-[var(--wiki-text)] outline-none transition-colors placeholder:text-[var(--wiki-muted-text)] focus:border-[var(--wiki-link-hover)]",
   searchButton:
     "ml-1 cursor-pointer rounded-[2px] border border-[var(--wiki-border-strong)] bg-gradient-to-b from-[var(--wiki-control-bg)] to-[var(--wiki-control-bg-end)] px-2.5 py-1 text-[13px] text-[var(--wiki-text)] hover:bg-[var(--wiki-control-hover)]",
   searchDropdown:
-    "absolute left-0 top-full z-50 w-[220px] border border-[var(--wiki-border-strong)] bg-[var(--wiki-surface)] shadow-[0_2px_8px_var(--wiki-shadow)]",
+    "absolute left-0 top-full z-50 w-full border border-[var(--wiki-border-strong)] bg-[var(--wiki-surface)] shadow-[0_2px_8px_var(--wiki-shadow)]",
   searchItem:
     "cursor-pointer px-2.5 py-1.5 text-[13px] text-[var(--wiki-link)] hover:bg-[var(--wiki-control-hover)]",
   body: "mx-auto min-h-screen max-w-[1100px] border border-t-0 border-[var(--wiki-border)] bg-[var(--wiki-surface)] px-7 pb-10 pt-5 max-md:px-3.5 max-md:pb-[30px] max-md:pt-3.5",
@@ -123,10 +126,10 @@ export const wiki = {
   referenceItem: "mb-0.5 break-inside-avoid",
   referenceNumber: "cursor-pointer font-bold text-[var(--wiki-link)]",
   externalList:
-    "list-disc pl-7 text-sm leading-loose [&_a]:text-[var(--wiki-link)] [&_a]:no-underline hover:[&_a]:underline",
+    "list-disc pl-7 text-sm leading-loose [&_a]:text-[var(--wiki-link)] [&_a]:no-underline [&_a:hover]:underline",
   externalIcon: "ml-[3px] inline-block h-3.5 w-3.5 align-middle opacity-50",
   categories:
-    "mt-6 flex flex-wrap items-center gap-1 border border-[var(--wiki-border)] bg-[var(--wiki-muted-bg)] px-3 py-2 text-[13px]",
+    "mt-6 flex scroll-mt-24 flex-wrap items-center gap-1 border border-[var(--wiki-border)] bg-[var(--wiki-muted-bg)] px-3 py-2 text-[13px]",
   categoriesLabel: "mr-1 font-bold",
   categoryLink: "cursor-pointer text-[var(--wiki-link)] no-underline hover:underline",
   categorySeparator: "mx-0.5 text-[var(--wiki-border-strong)]",

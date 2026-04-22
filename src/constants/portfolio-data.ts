@@ -17,15 +17,12 @@ export const PERSON: Person = {
   occupation: "Fullstack JavaScript Developer",
   title: "Fullstack Developer",
   isOpenToWork: true,
-  hireMeHref:
-    "mailto:tamerlankengerli2002@gmail.com?subject=Hiring%20opportunity%20for%20Tamerlan%20Kangarli",
   almaMater: [
     "Azerbaijan State University of Economics",
     "Azerbaijan State Oil and Industry University",
   ],
   email: "tamerlankengerli2002@gmail.com",
   telegram: "@tamerlankangarli",
-  phone: "+994 55 985 15 10",
   github: "github.com/TamerlanK",
   linkedin: "linkedin.com/in/tamerlankangarli",
   knownFor:
@@ -224,9 +221,7 @@ export const HOBBIES: HobbyItem[] = [
 
 export const LANGUAGES_SPOKEN: LanguageItem[] = [
   { lang: "Azerbaijani", level: "Native" },
-  { lang: "Turkish", level: "Fluent" },
   { lang: "English", level: "Professional proficiency" },
-  { lang: "Russian", level: "Conversational" },
 ]
 
 export const REFERENCES: ReferenceItem[] = [

@@ -32,10 +32,6 @@ export const TOC_ITEMS: TocItem[] = [
   { id: "hobbies", label: "Personal interests", num: "5" },
   { id: "languages", label: "Languages", num: "6" },
   { id: "contact", label: "Contact and links", num: "7" },
-  { id: "references", label: "References", num: "8" },
-  { id: "external", label: "External links", num: "9" },
-  { id: "categories", label: "Categories", num: "10" },
+  { id: "external", label: "External links", num: "8" },
+  { id: "categories", label: "Categories", num: "9" },
 ]
-
-export const WIKI_TABS = ["Article", "Talk", "Read", "View history"] as const
-export type WikiTab = (typeof WIKI_TABS)[number]

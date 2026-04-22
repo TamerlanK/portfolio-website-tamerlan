@@ -1,6 +1,7 @@
-import { WikiLink } from "@/components/common/WikiLink"
 import type { WikiTheme } from "@/hooks/useWikiTheme"
 import { wiki } from "@/styles/wiki"
+
+import { WikiSearch } from "../wiki/WikiSearch"
 
 type WikiHeaderProps = {
   onThemeChange: (theme: WikiTheme) => void
@@ -19,6 +20,7 @@ export function WikiHeader({ onThemeChange, theme }: WikiHeaderProps) {
           <span className={wiki.wordmarkTagline}>The Free Personal Encyclopedia</span>
         </div>
       </div>
+      <WikiSearch />
       <div className={wiki.headerActions}>
         <div aria-label="Appearance" className={wiki.themeControl} role="group">
           {(["light", "dark"] as const).map((themeOption) => (
@@ -34,10 +36,6 @@ export function WikiHeader({ onThemeChange, theme }: WikiHeaderProps) {
               {themeOption === "light" ? "Light" : "Dark"}
             </button>
           ))}
-        </div>
-        <div className={wiki.headerLinks}>
-          <WikiLink>Create account</WikiLink>
-          <WikiLink>Log in</WikiLink>
         </div>
       </div>
     </header>

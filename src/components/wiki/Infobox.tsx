@@ -1,6 +1,5 @@
 import type { ReactNode } from "react"
 
-import { WikiLink } from "@/components/common/WikiLink"
 import { PERSON } from "@/constants/portfolio-data"
 import { wiki } from "@/styles/wiki"
 
@@ -50,16 +49,7 @@ export function Infobox() {
         <InfoRow label="Nationality" value={PERSON.nationality} />
         <InfoRow label="Occupation" value={PERSON.occupation} />
         <InfoRow label="Title" value={PERSON.title} />
-        <InfoRow
-          label={PERSON.isOpenToWork ? "Availability" : "Employer"}
-          value={
-            PERSON.isOpenToWork ? (
-              <WikiLink href={PERSON.hireMeHref}>Hire me</WikiLink>
-            ) : (
-              PERSON.employer
-            )
-          }
-        />
+        <InfoRow label="Availability" value={PERSON.isOpenToWork ? "Open to opportunities" : PERSON.employer} />
         <InfoRow label="Known for" value={PERSON.knownFor} />
         <InfoRow label="Years active" value={PERSON.yearsActive} />
         <InfoRow label="CV" value={<CvActions compact />} />
@@ -74,7 +64,11 @@ export function Infobox() {
         />
         <InfoRow
           label="GitHub"
-          value={<WikiLink href={`https://${PERSON.github}`}>{PERSON.github}</WikiLink>}
+          value={
+            <a href={`https://${PERSON.github}`} rel="noopener noreferrer" target="_blank">
+              {PERSON.github}
+            </a>
+          }
         />
       </tbody>
     </table>

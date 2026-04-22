@@ -2,7 +2,6 @@ import { useState } from "react"
 
 import { ExternalIcon } from "@/components/common/ExternalIcon"
 import { Hatnote } from "@/components/common/Hatnote"
-import { ReferenceLink } from "@/components/common/ReferenceLink"
 import { SectionHeading } from "@/components/common/SectionHeading"
 import { WikiLink } from "@/components/common/WikiLink"
 import { ScrollTopButton } from "@/components/layout/ScrollTopButton"
@@ -13,7 +12,6 @@ import { ExperienceBullets } from "@/components/wiki/ExperienceBullets"
 import { Infobox } from "@/components/wiki/Infobox"
 import { LastModified } from "@/components/wiki/LastModified"
 import { TableOfContents } from "@/components/wiki/TableOfContents"
-import { WikiTabs } from "@/components/wiki/WikiTabs"
 import {
   EDUCATION,
   EXPERIENCE,
@@ -21,10 +19,8 @@ import {
   LANGUAGES_SPOKEN,
   NOTABLE_WORK,
   PERSON,
-  REFERENCES,
   SKILLS,
 } from "@/constants/portfolio-data"
-import type { WikiTab } from "@/constants/portfolio-navigation"
 import { useScrollTopVisibility } from "@/hooks/useScrollTopVisibility"
 import { useWikiTheme } from "@/hooks/useWikiTheme"
 import { wiki } from "@/styles/wiki"
@@ -54,36 +50,30 @@ function ContactLinks() {
       <div className={wiki.contactItem}>
         <div className={wiki.contactLabel}>Telegram</div>
         <div className={wiki.contactValue}>
-          <a href="https://t.me/tamerlankangarli">{PERSON.telegram}</a>
+          <a href="https://t.me/tamerlankangarli" rel="noopener noreferrer" target="_blank">
+            {PERSON.telegram}
+          </a>
         </div>
       </div>
       <div className={wiki.contactItem}>
         <div className={wiki.contactLabel}>GitHub</div>
         <div className={wiki.contactValue}>
-          <a href={`https://${PERSON.github}`}>{PERSON.github}</a>
+          <a href={`https://${PERSON.github}`} rel="noopener noreferrer" target="_blank">
+            {PERSON.github}
+          </a>
         </div>
       </div>
       <div className={wiki.contactItem}>
         <div className={wiki.contactLabel}>LinkedIn</div>
         <div className={wiki.contactValue}>
-          <a href={`https://${PERSON.linkedin}`}>{PERSON.linkedin}</a>
-        </div>
-      </div>
-      <div className={wiki.contactItem}>
-        <div className={wiki.contactLabel}>Hire me</div>
-        <div className={wiki.contactValue}>
-          <a href={PERSON.hireMeHref}>Open to opportunities</a>
+          <a href={`https://${PERSON.linkedin}`} rel="noopener noreferrer" target="_blank">
+            {PERSON.linkedin}
+          </a>
         </div>
       </div>
       <div className={wiki.contactItem}>
         <div className={wiki.contactLabel}>CV</div>
         <CvActions />
-      </div>
-      <div className={wiki.contactItem}>
-        <div className={wiki.contactLabel}>Phone</div>
-        <div className={wiki.contactValue}>
-          <a href={`tel:${PERSON.phone}`}>{PERSON.phone}</a>
-        </div>
       </div>
     </div>
   )
@@ -91,14 +81,12 @@ function ContactLinks() {
 
 export function WikiPortfolioPage() {
   const [tocVisible, setTocVisible] = useState(true)
-  const [activeTab, setActiveTab] = useState<WikiTab>("Article")
   const showScrollTop = useScrollTopVisibility()
   const { setTheme, theme } = useWikiTheme()
 
   return (
     <div className={wiki.app} data-theme={theme}>
       <WikiHeader onThemeChange={setTheme} theme={theme} />
-      <WikiTabs active={activeTab} onChange={setActiveTab} />
 
       <main className={wiki.body}>
         <h1 className={wiki.pageTitle}>{PERSON.name}</h1>
@@ -125,7 +113,6 @@ export function WikiPortfolioPage() {
             opportunities and has recently worked at <WikiLink>Andersen Lab</WikiLink>, where he
             engineered scalable user interfaces and backend services for logistics and healthcare
             applications.
-            <ReferenceLink n={1} />
           </p>
           <p className={wiki.paragraph}>
             Kangarli has over three years of professional experience building production-grade web
@@ -133,8 +120,7 @@ export function WikiPortfolioPage() {
             <WikiLink>Node.js</WikiLink>. He is known for architecting large-scale frontend systems,
             designing reusable component libraries, and driving significant performance improvements
             across multiple enterprise platforms.
-            <ReferenceLink n={2} /> His work spans the logistics, healthcare, HR, fintech, and
-            e-commerce sectors.
+            His work spans the logistics, healthcare, HR, fintech, and e-commerce sectors.
           </p>
 
           <TableOfContents visible={tocVisible} onToggle={() => setTocVisible((visible) => !visible)} />
@@ -144,18 +130,16 @@ export function WikiPortfolioPage() {
             Tamerlan Kangarli was born in 2002 in <WikiLink>Baku</WikiLink>, the capital of{" "}
             <WikiLink>Azerbaijan</WikiLink>. He pursued higher education in the field of information
             technology and cybersecurity at two of Azerbaijan's leading universities.
-            <ReferenceLink n={3} />
           </p>
           <p className={wiki.paragraph}>
             He earned a <WikiLink>Bachelor's degree</WikiLink> in Information Assurance from{" "}
             <WikiLink>Azerbaijan State Oil and Industry University</WikiLink> (ASOIU), where he gained
             foundational knowledge in information systems security, software development, and data
             protection.
-            <ReferenceLink n={3} /> He subsequently enrolled in a{" "}
+            He subsequently enrolled in a{" "}
             <WikiLink>Master's program</WikiLink> in Cybersecurity at{" "}
             <WikiLink>Azerbaijan State University of Economics</WikiLink> (UNEC), furthering his
             expertise in network defense and advanced security methodologies.
-            <ReferenceLink n={5} />
           </p>
           <table className={wiki.educationTable}>
             <thead>
@@ -192,11 +176,9 @@ export function WikiPortfolioPage() {
             he engineered scalable UIs for a high-volume Logistics{" "}
             <WikiLink>Warehouse Management System</WikiLink> using React, TypeScript, and Redux, while
             simultaneously developing secure <WikiLink>RESTful</WikiLink> APIs for a Medical Care
-            Application using <WikiLink>NestJS</WikiLink>.<ReferenceLink n={1} /> He increased test
+            Application using <WikiLink>NestJS</WikiLink>. He increased test
             coverage from 40% to 85% using <WikiLink>Jest</WikiLink> and mentored three junior
             engineers.
-            <ReferenceLink n={7} />
-            <ReferenceLink n={8} />
           </p>
           <ExperienceBullets bullets={EXPERIENCE[0].bullets} />
 
@@ -209,9 +191,7 @@ export function WikiPortfolioPage() {
             <WikiLink>HR</WikiLink> and Accounting management system. His work included CRUD
             functionality, real-time search, advanced filtering, reusable type-safe UI components,
             dynamic forms, React Router navigation, and REST API integration.
-            <ReferenceLink n={2} /> He also contributed to the <WikiLink>SOCAR</WikiLink> Downstream
-            website development.
-            <ReferenceLink n={6} />
+            He also contributed to the <WikiLink>SOCAR</WikiLink> Downstream website development.
           </p>
           <ExperienceBullets bullets={EXPERIENCE[1].bullets} />
 
@@ -224,7 +204,6 @@ export function WikiPortfolioPage() {
             type-safe frontend applications with TypeScript under senior engineering mentorship,
             rebuilt an exam platform end-to-end, and delivered personal React projects from concept
             through deployment.
-            <ReferenceLink n={4} />
           </p>
           <ExperienceBullets bullets={EXPERIENCE[2].bullets} />
 
@@ -278,8 +257,6 @@ export function WikiPortfolioPage() {
           <p className={wiki.paragraph}>
             Throughout his career, Kangarli has contributed to several significant projects across
             multiple industries:
-            <ReferenceLink n={1} />
-            <ReferenceLink n={2} />
           </p>
           <table className={wiki.projectTable}>
             <thead>
@@ -318,10 +295,7 @@ export function WikiPortfolioPage() {
           ))}
 
           <SectionHeading id="languages">Languages</SectionHeading>
-          <p className={wiki.paragraph}>
-            Kangarli is multilingual, reflecting the diverse linguistic environment of{" "}
-            <WikiLink>Azerbaijan</WikiLink>:
-          </p>
+          <p className={wiki.paragraph}>Kangarli works professionally in Azerbaijani and English:</p>
           <table className={wiki.compactTable}>
             <thead>
               <tr>
@@ -344,27 +318,24 @@ export function WikiPortfolioPage() {
           <SectionHeading id="contact">Contact and links</SectionHeading>
           <ContactLinks />
 
-          <SectionHeading id="references">References</SectionHeading>
-          <div className={wiki.referencesList}>
-            {REFERENCES.map((reference) => (
-              <div className={wiki.referenceItem} id={`ref-${reference.id}`} key={reference.id}>
-                <span className={wiki.referenceNumber}>^ </span>
-                <span>{reference.text}</span>
-              </div>
-            ))}
-          </div>
-
           <SectionHeading id="external">External links</SectionHeading>
           <ul className={wiki.externalList}>
             <li>
-              <a href={`https://${PERSON.github}`}>GitHub profile — TamerlanK</a> <ExternalIcon />
-            </li>
-            <li>
-              <a href={`https://${PERSON.linkedin}`}>LinkedIn profile — Tamerlan Kangarli</a>{" "}
+              <a href={`https://${PERSON.github}`} rel="noopener noreferrer" target="_blank">
+                GitHub profile - TamerlanK
+              </a>{" "}
               <ExternalIcon />
             </li>
             <li>
-              <a href="https://t.me/tamerlankangarli">Telegram — @tamerlankangarli</a>{" "}
+              <a href={`https://${PERSON.linkedin}`} rel="noopener noreferrer" target="_blank">
+                LinkedIn profile - Tamerlan Kangarli
+              </a>{" "}
+              <ExternalIcon />
+            </li>
+            <li>
+              <a href="https://t.me/tamerlankangarli" rel="noopener noreferrer" target="_blank">
+                Telegram - @tamerlankangarli
+              </a>{" "}
               <ExternalIcon />
             </li>
           </ul>
@@ -373,7 +344,7 @@ export function WikiPortfolioPage() {
             <span className={wiki.categoriesLabel}>Categories:</span>
             {CATEGORIES.map((category, index) => (
               <span key={category}>
-                <WikiLink className={wiki.categoryLink}>{category}</WikiLink>
+                <strong className={wiki.textHighlight}>{category}</strong>
                 {index < CATEGORIES.length - 1 && (
                   <span className={wiki.categorySeparator}>|</span>
                 )}

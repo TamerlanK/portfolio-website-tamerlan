@@ -1,4 +1,4 @@
-import type { AnchorHTMLAttributes, MouseEvent, ReactNode } from "react"
+import type { AnchorHTMLAttributes, ReactNode } from "react"
 
 import { wiki } from "@/styles/wiki"
 
@@ -7,17 +7,13 @@ type WikiLinkProps = {
   href?: string
 } & Omit<AnchorHTMLAttributes<HTMLAnchorElement>, "href">
 
-export function WikiLink({ children, href, onClick, className = "", ...props }: WikiLinkProps) {
-  const handleClick = (event: MouseEvent<HTMLAnchorElement>) => {
-    if (!href) {
-      event.preventDefault()
-    }
-
-    onClick?.(event)
+export function WikiLink({ children, href, className = "", ...props }: WikiLinkProps) {
+  if (!href) {
+    return <strong className={`${wiki.textHighlight} ${className}`}>{children}</strong>
   }
 
   return (
-    <a href={href ?? "#"} className={`${wiki.link} ${className}`} onClick={handleClick} {...props}>
+    <a href={href} className={`${wiki.link} ${className}`} {...props}>
       {children}
     </a>
   )
