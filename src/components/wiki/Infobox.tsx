@@ -4,6 +4,8 @@ import { WikiLink } from "@/components/common/WikiLink"
 import { PERSON } from "@/constants/portfolio-data"
 import { wiki } from "@/styles/wiki"
 
+import { CvActions } from "./CvActions"
+
 type InfoRowProps = {
   label: string
   value: ReactNode
@@ -48,9 +50,19 @@ export function Infobox() {
         <InfoRow label="Nationality" value={PERSON.nationality} />
         <InfoRow label="Occupation" value={PERSON.occupation} />
         <InfoRow label="Title" value={PERSON.title} />
-        <InfoRow label="Employer" value={PERSON.employer} />
+        <InfoRow
+          label={PERSON.isOpenToWork ? "Availability" : "Employer"}
+          value={
+            PERSON.isOpenToWork ? (
+              <WikiLink href={PERSON.hireMeHref}>Hire me</WikiLink>
+            ) : (
+              PERSON.employer
+            )
+          }
+        />
         <InfoRow label="Known for" value={PERSON.knownFor} />
         <InfoRow label="Years active" value={PERSON.yearsActive} />
+        <InfoRow label="CV" value={<CvActions compact />} />
         <InfoRow
           label="Alma mater"
           value={PERSON.almaMater.map((school, index) => (

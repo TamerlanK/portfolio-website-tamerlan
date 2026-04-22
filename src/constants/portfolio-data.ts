@@ -16,7 +16,8 @@ export const PERSON: Person = {
   nationality: "Azerbaijani",
   occupation: "Fullstack JavaScript Developer",
   title: "Fullstack Developer",
-  employer: "Andersen Lab",
+  isOpenToWork: true,
+  hireMeHref: "mailto:tamerlankengerli2002@gmail.com?subject=Hiring%20opportunity%20for%20Tamerlan%20Kangarli",
   almaMater: [
     "Azerbaijan State University of Economics",
     "Azerbaijan State Oil and Industry University",
@@ -75,6 +76,17 @@ export const EXPERIENCE: ExperienceItem[] = [
       "Translated Figma designs into pixel-accurate, fully functional interfaces, collaborating closely with designers and stakeholders.",
       "Contributed to fintech-related frontend features, emphasizing intuitive UI, clear data representation, and reliability.",
       "Achieved 1st place in a company hackathon by leading frontend development of a feedback management system using React, collaborating with a cross-functional team to deliver a complete solution.",
+    ],
+  },
+  {
+    year: "May 2023 – Feb 2024",
+    role: "Frontend Developer Intern",
+    company: "JET Academy",
+    bullets: [
+      "Completed a structured frontend development internship focused on HTML, CSS, JavaScript, React, and modern web development fundamentals.",
+      "Built responsive web interfaces and practice projects while developing a strong foundation in component-based UI architecture.",
+      "Worked with mentors to improve code quality, debugging habits, Git workflows, and practical frontend problem-solving skills.",
+      "Strengthened knowledge of browser behavior, accessibility basics, layout systems, and reusable UI patterns.",
     ],
   },
 ]
@@ -201,16 +213,20 @@ export const NOTABLE_WORK: NotableWorkItem[] = [
 
 export const HOBBIES: HobbyItem[] = [
   {
-    name: "Open Source",
-    desc: "Active contributor on GitHub, maintaining personal projects and experimenting with emerging web technologies and frameworks.",
+    name: "Playing piano",
+    desc: "Enjoys practicing piano as a creative discipline that builds focus, rhythm, and patience.",
   },
   {
-    name: "Continuous Learning",
-    desc: "Consistently pursuing professional growth through certifications, technical reading, and staying current with the JavaScript ecosystem.",
+    name: "Speedcubing",
+    desc: "Practices speedcubing to sharpen pattern recognition, memory, and calm problem solving under time pressure.",
   },
   {
-    name: "Problem Solving",
-    desc: "Enjoys algorithmic challenges and competitive programming exercises to sharpen logical thinking and coding fluency.",
+    name: "Playing chess",
+    desc: "Plays chess to develop strategic thinking, planning, and decision-making discipline.",
+  },
+  {
+    name: "Fitness",
+    desc: "Maintains a consistent fitness routine for energy, resilience, and long-term personal discipline.",
   },
 ]
 

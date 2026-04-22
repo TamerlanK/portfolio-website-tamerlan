@@ -89,6 +89,20 @@ export const wiki = {
   contactLabel:
     "mb-0.5 text-[11px] font-bold uppercase tracking-[0.04em] text-[#54595d]",
   contactValue: "[&>a]:text-[13.5px] [&>a]:text-[#0645ad] [&>a]:no-underline [&>a:hover]:underline",
+  cvActions: "flex flex-wrap gap-2",
+  cvActionLink:
+    "inline-flex cursor-pointer items-center rounded-[2px] border border-[#a2a9b1] bg-gradient-to-b from-white to-[#eaecf0] px-2.5 py-1 text-[12.5px] font-bold text-[#0645ad] no-underline hover:bg-[#eaf3ff] hover:underline",
+  cvViewerBackdrop:
+    "fixed inset-0 z-[300] flex items-center justify-center bg-black/45 px-4 py-6",
+  cvViewerDialog:
+    "flex h-full max-h-[900px] w-full max-w-[900px] flex-col border border-[#a2a9b1] bg-white shadow-[0_8px_30px_rgba(0,0,0,0.25)]",
+  cvViewerHeader:
+    "flex items-center justify-between border-b border-[#c8ccd1] bg-[#f8f9fa] px-3 py-2",
+  cvViewerTitle:
+    "font-['Linux_Libertine',Georgia,Times,serif] text-[18px] font-bold text-[#202122]",
+  cvViewerClose:
+    "cursor-pointer rounded-[2px] border border-[#a2a9b1] bg-gradient-to-b from-white to-[#eaecf0] px-2.5 py-1 text-[12.5px] text-[#202122] hover:bg-[#eaf3ff]",
+  cvViewerFrame: "min-h-0 flex-1 border-0",
   referencesList:
     "columns-2 gap-6 text-[12.5px] leading-[1.8] max-md:columns-1",
   referenceItem: "mb-0.5 break-inside-avoid",

@@ -10,7 +10,9 @@ export type Person = {
   nationality: string
   occupation: string
   title: string
-  employer: string
+  employer?: string
+  isOpenToWork: boolean
+  hireMeHref: string
   almaMater: string[]
   email: string
   telegram: string

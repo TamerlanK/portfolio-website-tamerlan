@@ -8,6 +8,7 @@ import { WikiLink } from "@/components/common/WikiLink"
 import { ScrollTopButton } from "@/components/layout/ScrollTopButton"
 import { WikiFooter } from "@/components/layout/WikiFooter"
 import { WikiHeader } from "@/components/layout/WikiHeader"
+import { CvActions } from "@/components/wiki/CvActions"
 import { ExperienceBullets } from "@/components/wiki/ExperienceBullets"
 import { Infobox } from "@/components/wiki/Infobox"
 import { LastModified } from "@/components/wiki/LastModified"
@@ -37,7 +38,7 @@ const CATEGORIES = [
   "React developers",
   "ASOIU alumni",
   "UNEC alumni",
-  "Andersen Lab employees",
+  "Open to work",
 ]
 
 function ContactLinks() {
@@ -66,6 +67,16 @@ function ContactLinks() {
         <div className={wiki.contactValue}>
           <a href={`https://${PERSON.linkedin}`}>{PERSON.linkedin}</a>
         </div>
+      </div>
+      <div className={wiki.contactItem}>
+        <div className={wiki.contactLabel}>Hire me</div>
+        <div className={wiki.contactValue}>
+          <a href={PERSON.hireMeHref}>Open to opportunities</a>
+        </div>
+      </div>
+      <div className={wiki.contactItem}>
+        <div className={wiki.contactLabel}>CV</div>
+        <CvActions />
       </div>
       <div className={wiki.contactItem}>
         <div className={wiki.contactLabel}>Phone</div>
@@ -108,9 +119,10 @@ export function WikiPortfolioPage() {
           <p className={wiki.paragraph}>
             <b>Tamerlan Kangarli</b> (born 2002) is an <WikiLink>Azerbaijani</WikiLink>{" "}
             <WikiLink>fullstack JavaScript developer</WikiLink> based in{" "}
-            <WikiLink>Baku, Azerbaijan</WikiLink>. He currently serves as a Fullstack Developer at{" "}
-            <WikiLink>Andersen Lab</WikiLink>, where he engineers scalable user interfaces and
-            backend services for logistics and healthcare applications.
+            <WikiLink>Baku, Azerbaijan</WikiLink>. He is currently open to fullstack developer
+            opportunities and has recently worked at <WikiLink>Andersen Lab</WikiLink>, where he
+            engineered scalable user interfaces and backend services for logistics and healthcare
+            applications.
             <ReferenceLink n={1} />
           </p>
           <p className={wiki.paragraph}>
@@ -164,10 +176,21 @@ export function WikiPortfolioPage() {
 
           <SectionHeading id="career">Career</SectionHeading>
           <p className={wiki.paragraph}>
-            Kangarli began his professional career in early 2024 and has rapidly progressed from
-            frontend development roles to a fullstack position, working across three companies in the
-            Azerbaijani and international technology sectors.
+            Kangarli began his professional career in May 2023 and progressed from a frontend
+            internship to production frontend roles and fullstack development, working across four
+            organizations in the Azerbaijani and international technology sectors.
           </p>
+
+          <SectionHeading id="career-jet" level={3}>
+            JET Academy (May 2023 – Feb 2024)
+          </SectionHeading>
+          <p className={wiki.paragraph}>
+            Kangarli completed his first frontend development internship at{" "}
+            <WikiLink>JET Academy</WikiLink>, where he built a foundation in web interfaces,
+            JavaScript, React, responsive layouts, Git workflows, and practical frontend
+            problem-solving.
+          </p>
+          <ExperienceBullets bullets={EXPERIENCE[3].bullets} />
 
           <SectionHeading id="career-cic" level={3}>
             Caspian Innovation Center (Feb 2024 – May 2024)
@@ -202,9 +225,9 @@ export function WikiPortfolioPage() {
             Andersen Lab (Aug 2025 – Apr 2026)
           </SectionHeading>
           <p className={wiki.paragraph}>
-            Since August 2025, Kangarli has served as a Fullstack Developer at{" "}
+            From August 2025 to April 2026, Kangarli served as a Fullstack Developer at{" "}
             <WikiLink>Andersen Lab</WikiLink>, a global software engineering company. In this role,
-            he engineers scalable UIs for a high-volume Logistics{" "}
+            he engineered scalable UIs for a high-volume Logistics{" "}
             <WikiLink>Warehouse Management System</WikiLink> using React, TypeScript, and Redux, while
             simultaneously developing secure <WikiLink>RESTful</WikiLink> APIs for a Medical Care
             Application using <WikiLink>NestJS</WikiLink>.<ReferenceLink n={1} /> He increased test
