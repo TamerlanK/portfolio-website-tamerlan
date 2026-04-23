@@ -4,15 +4,19 @@ import { TOC_ITEMS } from "@/constants/portfolio-navigation"
 import { scrollToElement } from "@/lib/scroll"
 import { wiki } from "@/styles/wiki"
 
+const HR_SUGGESTION_IDS = ["career", "skills", "projects"]
+const HR_SUGGESTIONS = TOC_ITEMS.filter((item) => HR_SUGGESTION_IDS.includes(item.id))
+
 export function WikiSearch() {
   const [query, setQuery] = useState("")
   const [showDropdown, setShowDropdown] = useState(false)
 
-  const filteredSections = query.trim()
+  const hasQuery = Boolean(query.trim())
+  const filteredSections = hasQuery
     ? TOC_ITEMS.filter((item) => !item.sub).filter((item) =>
         item.label.toLowerCase().includes(query.toLowerCase()),
       )
-    : []
+    : HR_SUGGESTIONS
 
   return (
     <div className={wiki.searchContainer}>
@@ -33,6 +37,7 @@ export function WikiSearch() {
       </button>
       {showDropdown && filteredSections.length > 0 && (
         <div className={wiki.searchDropdown}>
+          {!hasQuery && <div className={wiki.searchGroupLabel}>HRs may be interested in</div>}
           {filteredSections.map((section) => (
             <button
               className={`${wiki.searchItem} block w-full text-left`}

@@ -33,5 +33,4 @@ export const TOC_ITEMS: TocItem[] = [
   { id: "languages", label: "Languages", num: "6" },
   { id: "contact", label: "Contact and links", num: "7" },
   { id: "external", label: "External links", num: "8" },
-  { id: "categories", label: "Categories", num: "9" },
 ]

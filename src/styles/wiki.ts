@@ -37,6 +37,8 @@ export const wiki = {
     "ml-1 cursor-pointer rounded-[2px] border border-[var(--wiki-border-strong)] bg-gradient-to-b from-[var(--wiki-control-bg)] to-[var(--wiki-control-bg-end)] px-2.5 py-1 text-[13px] text-[var(--wiki-text)] hover:bg-[var(--wiki-control-hover)]",
   searchDropdown:
     "absolute left-0 top-full z-50 w-full border border-[var(--wiki-border-strong)] bg-[var(--wiki-surface)] shadow-[0_2px_8px_var(--wiki-shadow)]",
+  searchGroupLabel:
+    "border-b border-[var(--wiki-border)] bg-[var(--wiki-page-bg)] px-2.5 py-1.5 text-[11px] font-bold uppercase tracking-[0.04em] text-[var(--wiki-muted-text)]",
   searchItem:
     "cursor-pointer px-2.5 py-1.5 text-[13px] text-[var(--wiki-link)] hover:bg-[var(--wiki-control-hover)]",
   body: "mx-auto min-h-screen max-w-[1100px] border border-t-0 border-[var(--wiki-border)] bg-[var(--wiki-surface)] px-7 pb-10 pt-5 max-md:px-3.5 max-md:pb-[30px] max-md:pt-3.5",
@@ -135,12 +137,6 @@ export const wiki = {
   externalList:
     "list-disc pl-7 text-sm leading-loose [&_a]:text-[var(--wiki-link)] [&_a]:no-underline [&_a:hover]:underline",
   externalIcon: "ml-[3px] inline-block h-3.5 w-3.5 align-middle opacity-50",
-  categories:
-    "mt-6 flex scroll-mt-24 flex-wrap items-center gap-1 border border-[var(--wiki-border)] bg-[var(--wiki-muted-bg)] px-3 py-2 text-[13px]",
-  categoriesLabel: "mr-1 font-bold",
-  categoryLink:
-    "cursor-pointer text-[var(--wiki-link)] no-underline hover:underline",
-  categorySeparator: "mx-0.5 text-[var(--wiki-border-strong)]",
   footer:
     "mx-auto max-w-[1100px] px-7 py-4 text-center text-xs leading-[1.7] text-[var(--wiki-muted-text)]",
   lastModified:

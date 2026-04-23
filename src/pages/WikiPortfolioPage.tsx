@@ -24,19 +24,6 @@ import { useScrollTopVisibility } from "@/hooks/useScrollTopVisibility"
 import { useWikiTheme } from "@/hooks/useWikiTheme"
 import { wiki } from "@/styles/wiki"
 
-const CATEGORIES = [
-  "Living people",
-  "2002 births",
-  "Azerbaijani software developers",
-  "People from Baku",
-  "Frontend developers",
-  "JavaScript developers",
-  "React developers",
-  "ASOIU alumni",
-  "UNEC alumni",
-  "Open to work",
-]
-
 function ContactLinks() {
   return (
     <div className={wiki.contactGrid}>
@@ -408,18 +395,6 @@ export function WikiPortfolioPage() {
               <ExternalIcon />
             </li>
           </ul>
-
-          <div className={wiki.categories} id="categories">
-            <span className={wiki.categoriesLabel}>Categories:</span>
-            {CATEGORIES.map((category, index) => (
-              <span key={category}>
-                <strong className={wiki.textHighlight}>{category}</strong>
-                {index < CATEGORIES.length - 1 && (
-                  <span className={wiki.categorySeparator}>|</span>
-                )}
-              </span>
-            ))}
-          </div>
 
           <LastModified />
         </div>
