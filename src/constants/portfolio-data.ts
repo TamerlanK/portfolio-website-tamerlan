@@ -5,7 +5,6 @@ import type {
   LanguageItem,
   NotableWorkItem,
   Person,
-  ReferenceItem,
   SkillsMap,
 } from "@/types/portfolio"
 
@@ -14,8 +13,8 @@ export const PERSON: Person = {
   birthName: "Tamerlan Kangarli",
   born: { date: "2002", location: "Baku, Azerbaijan" },
   nationality: "Azerbaijani",
-  occupation: "Fullstack JavaScript Developer",
-  title: "Fullstack Developer",
+  occupation: "Middle Frontend Developer",
+  title: "Middle Frontend Developer",
   isOpenToWork: true,
   almaMater: [
     "Azerbaijan State University of Economics",
@@ -34,7 +33,7 @@ export const PERSON: Person = {
 export const EXPERIENCE: ExperienceItem[] = [
   {
     year: "Aug 2025 - Apr 2026",
-    role: "Fullstack Developer",
+    role: "Middle Frontend Developer",
     company: "Andersen Lab",
     bullets: [
       "Tasked with scaling the frontend of a high-volume Logistics Warehouse Management System, architected responsive interfaces using React, TypeScript, and Redux, designing state management patterns that sustained performance under heavy real-time data flows across multiple modules.",
@@ -118,7 +117,7 @@ export const SKILLS: SkillsMap = {
     "Ant Design",
   ],
   "Forms & Validation": ["React Hook Form", "Formik", "Zod", "Yup"],
-  Backend: [
+  "Backend Familiarity": [
     "Node.js",
     "Express.js",
     "NestJS",
@@ -137,6 +136,7 @@ export const SKILLS: SkillsMap = {
     "Lazy Loading",
     "Memoization",
     "Web Performance Optimization",
+    "SLO/SLA Principles",
   ],
   "DevOps & Tooling": [
     "Git",
@@ -169,34 +169,16 @@ export const NOTABLE_WORK: NotableWorkItem[] = [
     tech: "React, TypeScript, Redux",
   },
   {
-    name: "Medical Care Application API",
-    desc: "Secure RESTful APIs and backend services ensuring data integrity and compliance with healthcare privacy standards.",
+    name: "Medical Care Application Integration",
+    desc: "Frontend integration work with backend APIs, applying practical understanding of Node.js, NestJS, and healthcare data flows.",
     company: "Andersen Lab",
-    tech: "NestJS, PostgreSQL",
+    tech: "React, REST APIs, NestJS familiarity",
   },
   {
     name: "HR & Accounting Platform",
     desc: "Led frontend development for 30+ modules delivering CRUD operations, real-time search, and advanced filtering.",
     company: "Millisoft",
     tech: "React, Formik, Yup, React Router",
-  },
-  {
-    name: "SOCAR Downstream Website",
-    desc: "Responsive landing page with pixel-perfect implementation and performance-focused design.",
-    company: "Millisoft",
-    tech: "React, TypeScript",
-  },
-  {
-    name: "E-Commerce Application",
-    desc: "Multi-page e-commerce platform with reusable components and scalable architecture.",
-    company: "Caspian Innovation Center",
-    tech: "React.js",
-  },
-  {
-    name: "Feedback Management System",
-    desc: "Hackathon-winning project - a complete feedback management system built with a cross-functional team.",
-    company: "Caspian Innovation Center",
-    tech: "React",
   },
 ]
 
@@ -214,6 +196,14 @@ export const HOBBIES: HobbyItem[] = [
     desc: "Enjoys playing chess and following recent games, tournaments, and developments in the chess world.",
   },
   {
+    name: "History",
+    desc: "Has a strong interest in history and enjoys learning about different periods, cultures, and the events that shaped societies.",
+  },
+  {
+    name: "Intellectual shows",
+    desc: "Likes watching intellectual shows that combine knowledge, strategy, reasoning, and thoughtful discussion.",
+  },
+  {
     name: "Fitness",
     desc: "Maintains a consistent fitness routine for energy, resilience, and long-term personal discipline.",
   },
@@ -222,39 +212,4 @@ export const HOBBIES: HobbyItem[] = [
 export const LANGUAGES_SPOKEN: LanguageItem[] = [
   { lang: "Azerbaijani", level: "Native" },
   { lang: "English", level: "Professional proficiency" },
-]
-
-export const REFERENCES: ReferenceItem[] = [
-  {
-    id: 1,
-    text: '"Andersen Lab - Engineering Team Profiles", Andersen Lab Corporate Portal, 2025.',
-  },
-  {
-    id: 2,
-    text: '"Millisoft - HR & Accounting Platform Release Notes", Millisoft Internal Documentation, 2024.',
-  },
-  {
-    id: 3,
-    text: '"Azerbaijan State Oil and Industry University - Graduate Registry", ASOIU, 2024.',
-  },
-  {
-    id: 4,
-    text: '"Caspian Innovation Center - Hackathon Results", CIC Newsletter, February 2024.',
-  },
-  {
-    id: 5,
-    text: '"Azerbaijan State University of Economics - Postgraduate Admissions", UNEC, 2024.',
-  },
-  {
-    id: 6,
-    text: '"SOCAR Downstream - Corporate Website Launch", SOCAR Press Release, 2024.',
-  },
-  {
-    id: 7,
-    text: '"Logistics WMS - Performance Benchmarks Report", Andersen Lab Engineering Blog, 2025.',
-  },
-  {
-    id: 8,
-    text: '"NestJS Medical Application - Compliance Audit Summary", Andersen Lab, 2025.',
-  },
 ]

@@ -52,11 +52,6 @@ export type LanguageItem = {
   level: string
 }
 
-export type ReferenceItem = {
-  id: number
-  text: string
-}
-
 export type TocItem = {
   id: string
   label: string

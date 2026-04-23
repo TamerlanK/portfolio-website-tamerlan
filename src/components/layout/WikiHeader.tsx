@@ -16,8 +16,8 @@ export function WikiHeader({ onThemeChange, theme }: WikiHeaderProps) {
           <span className={wiki.logoGlobe}>🌐</span>
         </div>
         <div className={wiki.wordmark}>
-          <span className={wiki.wordmarkTitle}>WikiPortfolio</span>
-          <span className={wiki.wordmarkTagline}>The Free Personal Encyclopedia</span>
+          <span className={wiki.wordmarkTitle}>Middle Frontend Developer</span>
+          <span className={wiki.wordmarkTagline}>Building clean systems</span>
         </div>
       </div>
       <WikiSearch />

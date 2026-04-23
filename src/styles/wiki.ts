@@ -12,8 +12,10 @@ export const wiki = {
   wordmark: "flex flex-col",
   wordmarkTitle:
     "font-['Linux_Libertine',Georgia,Times,serif] text-[19px] leading-[1.1] text-[var(--wiki-text)]",
-  wordmarkTagline: "text-[10.5px] italic tracking-[0.02em] text-[var(--wiki-muted-text)]",
-  headerActions: "flex shrink-0 flex-wrap items-center justify-end gap-3 text-xs max-md:justify-start",
+  wordmarkTagline:
+    "text-[10.5px] italic tracking-[0.02em] text-[var(--wiki-muted-text)]",
+  headerActions:
+    "flex shrink-0 flex-wrap items-center justify-end gap-3 text-xs max-md:justify-start",
   headerLinks: "flex gap-2",
   themeControl:
     "flex items-center overflow-hidden rounded-[2px] border border-[var(--wiki-border-strong)] bg-[var(--wiki-page-bg)]",
@@ -66,17 +68,23 @@ export const wiki = {
     "bg-[var(--wiki-accent-bg)] p-2 text-center font-['Linux_Libertine',Georgia,Times,serif] text-[17px] font-bold",
   infoboxImage: "bg-[var(--wiki-page-bg)] p-2.5 text-center",
   avatar:
-    "mx-auto flex h-[200px] w-[180px] items-center justify-center border border-[var(--wiki-border)] bg-[var(--wiki-avatar-bg)] text-[80px]",
+    "mx-auto h-[220px] w-[180px] border border-[var(--wiki-border)] bg-[var(--wiki-avatar-bg)] object-cover object-center",
   infoboxCaption: "mt-1 text-xs text-[var(--wiki-muted-text)]",
   infoboxLabel:
     "w-[90px] border-t border-[var(--wiki-border)] bg-[var(--wiki-page-bg)] px-2.5 py-1 text-left align-top text-[12.5px] font-bold",
   infoboxData: "border-t border-[var(--wiki-border)] px-2.5 py-1 text-[12.5px]",
+  hireDropdown: "relative inline-block",
+  hireSummary:
+    "inline-flex cursor-pointer list-none items-center rounded-[2px] border border-[var(--wiki-border-strong)] bg-gradient-to-b from-[var(--wiki-control-bg)] to-[var(--wiki-control-bg-end)] px-2 py-0.5 text-[12.5px] font-bold text-[var(--wiki-link)] hover:bg-[var(--wiki-control-hover)] hover:underline marker:hidden [&::-webkit-details-marker]:hidden",
+  hireMenu:
+    "absolute left-0 top-full z-40 mt-1 min-w-28 border border-[var(--wiki-border-strong)] bg-[var(--wiki-surface)] shadow-[0_2px_8px_var(--wiki-shadow)] [&>a]:block [&>a]:px-2.5 [&>a]:py-1.5 [&>a]:text-[12.5px] [&>a]:text-[var(--wiki-link)] [&>a]:no-underline [&>a:hover]:bg-[var(--wiki-control-hover)] [&>a:hover]:underline",
   table: "w-full border-collapse",
   educationTable: "my-2 w-full border-collapse text-[13.5px]",
   compactTable: "my-2 border-collapse text-[13.5px]",
   tableHeadCell:
     "border border-[var(--wiki-border)] bg-[var(--wiki-subtle-bg)] px-2.5 py-1.5 text-left align-top font-bold",
-  tableCell: "border border-[var(--wiki-border)] px-2.5 py-1.5 text-left align-top",
+  tableCell:
+    "border border-[var(--wiki-border)] px-2.5 py-1.5 text-left align-top",
   langCell: "border border-[var(--wiki-border)] px-3.5 py-1.5 text-left",
   langHeadCell:
     "border border-[var(--wiki-border)] bg-[var(--wiki-subtle-bg)] px-3.5 py-1.5 text-left font-bold",
@@ -90,17 +98,20 @@ export const wiki = {
   bulletList: "my-1.5 list-disc pl-6 text-[13.5px] leading-[1.7] [&>li]:mb-1",
   showMore:
     "mt-0.5 inline-block cursor-pointer text-[12.5px] text-[var(--wiki-link)] hover:underline",
-  timeline: "relative my-2 mb-3.5 ml-2.5 border-l-[3px] border-[var(--wiki-border)] pl-[18px]",
+  timeline:
+    "relative my-2 mb-3.5 ml-2.5 border-l-[3px] border-[var(--wiki-border)] pl-[18px]",
   timelineItem:
     "relative mb-3.5 before:absolute before:left-[-24.5px] before:top-1.5 before:h-2.5 before:w-2.5 before:rounded-full before:border-2 before:border-[var(--wiki-surface)] before:bg-[var(--wiki-accent-bg)] before:content-['']",
   timelineYear: "text-[13px] font-bold text-[var(--wiki-muted-text)]",
   timelineRole: "font-bold text-[var(--wiki-text)]",
   timelineCompany: "cursor-pointer text-[var(--wiki-link)] hover:underline",
   contactGrid: "my-2.5 grid grid-cols-2 gap-2 max-md:grid-cols-1",
-  contactItem: "border border-[var(--wiki-border)] bg-[var(--wiki-page-bg)] px-3.5 py-2.5 text-[13px]",
+  contactItem:
+    "border border-[var(--wiki-border)] bg-[var(--wiki-page-bg)] px-3.5 py-2.5 text-[13px]",
   contactLabel:
     "mb-0.5 text-[11px] font-bold uppercase tracking-[0.04em] text-[var(--wiki-muted-text)]",
-  contactValue: "[&>a]:text-[13.5px] [&>a]:text-[var(--wiki-link)] [&>a]:no-underline [&>a:hover]:underline",
+  contactValue:
+    "[&>a]:text-[13.5px] [&>a]:text-[var(--wiki-link)] [&>a]:no-underline [&>a:hover]:underline",
   cvActions: "flex flex-wrap gap-2",
   cvActionLink:
     "inline-flex cursor-pointer items-center rounded-[2px] border border-[var(--wiki-border-strong)] bg-gradient-to-b from-[var(--wiki-control-bg)] to-[var(--wiki-control-bg-end)] px-2.5 py-1 text-[12.5px] font-bold text-[var(--wiki-link)] no-underline hover:bg-[var(--wiki-control-hover)] hover:underline",
@@ -121,17 +132,14 @@ export const wiki = {
   cvViewerPage:
     "max-w-full border border-[var(--wiki-border-strong)] bg-white p-2 shadow-[0_1px_4px_var(--wiki-shadow)]",
   cvViewerCanvas: "block max-w-full",
-  referencesList:
-    "columns-2 gap-6 text-[12.5px] leading-[1.8] max-md:columns-1",
-  referenceItem: "mb-0.5 break-inside-avoid",
-  referenceNumber: "cursor-pointer font-bold text-[var(--wiki-link)]",
   externalList:
     "list-disc pl-7 text-sm leading-loose [&_a]:text-[var(--wiki-link)] [&_a]:no-underline [&_a:hover]:underline",
   externalIcon: "ml-[3px] inline-block h-3.5 w-3.5 align-middle opacity-50",
   categories:
     "mt-6 flex scroll-mt-24 flex-wrap items-center gap-1 border border-[var(--wiki-border)] bg-[var(--wiki-muted-bg)] px-3 py-2 text-[13px]",
   categoriesLabel: "mr-1 font-bold",
-  categoryLink: "cursor-pointer text-[var(--wiki-link)] no-underline hover:underline",
+  categoryLink:
+    "cursor-pointer text-[var(--wiki-link)] no-underline hover:underline",
   categorySeparator: "mx-0.5 text-[var(--wiki-border-strong)]",
   footer:
     "mx-auto max-w-[1100px] px-7 py-4 text-center text-xs leading-[1.7] text-[var(--wiki-muted-text)]",

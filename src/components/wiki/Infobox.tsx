@@ -1,5 +1,7 @@
+import { useEffect, useRef, useState } from "react"
 import type { ReactNode } from "react"
 
+import profileImage from "@/assets/me.jpg"
 import { PERSON } from "@/constants/portfolio-data"
 import { wiki } from "@/styles/wiki"
 
@@ -19,6 +21,62 @@ function InfoRow({ label, value }: InfoRowProps) {
   )
 }
 
+function HireMeDropdown() {
+  const [isOpen, setIsOpen] = useState(false)
+  const dropdownRef = useRef<HTMLDivElement>(null)
+
+  useEffect(() => {
+    if (!isOpen) {
+      return
+    }
+
+    function handlePointerDown(event: PointerEvent) {
+      if (!dropdownRef.current?.contains(event.target as Node)) {
+        setIsOpen(false)
+      }
+    }
+
+    function handleKeyDown(event: KeyboardEvent) {
+      if (event.key === "Escape") {
+        setIsOpen(false)
+      }
+    }
+
+    document.addEventListener("pointerdown", handlePointerDown)
+    document.addEventListener("keydown", handleKeyDown)
+
+    return () => {
+      document.removeEventListener("pointerdown", handlePointerDown)
+      document.removeEventListener("keydown", handleKeyDown)
+    }
+  }, [isOpen])
+
+  return (
+    <div className={wiki.hireDropdown} ref={dropdownRef}>
+      <button
+        aria-expanded={isOpen}
+        className={wiki.hireSummary}
+        onClick={() => setIsOpen((current) => !current)}
+        type="button"
+      >
+        Hire me
+      </button>
+      {isOpen && (
+        <div className={wiki.hireMenu}>
+          <a
+            href={`https://${PERSON.linkedin}`}
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            LinkedIn
+          </a>
+          <a href={`mailto:${PERSON.email}`}>Email</a>
+        </div>
+      )}
+    </div>
+  )
+}
+
 export function Infobox() {
   return (
     <table className={wiki.infobox}>
@@ -32,7 +90,7 @@ export function Infobox() {
       <tbody>
         <tr>
           <td className={wiki.infoboxImage} colSpan={2}>
-            <div className={wiki.avatar}>{PERSON.avatarEmoji}</div>
+            <img alt={PERSON.name} className={wiki.avatar} src={profileImage} />
             <div className={wiki.infoboxCaption}>{PERSON.name}, 2025</div>
           </td>
         </tr>
@@ -49,7 +107,10 @@ export function Infobox() {
         <InfoRow label="Nationality" value={PERSON.nationality} />
         <InfoRow label="Occupation" value={PERSON.occupation} />
         <InfoRow label="Title" value={PERSON.title} />
-        <InfoRow label="Availability" value={PERSON.isOpenToWork ? "Open to opportunities" : PERSON.employer} />
+        <InfoRow
+          label="Availability"
+          value={PERSON.isOpenToWork ? <HireMeDropdown /> : PERSON.employer}
+        />
         <InfoRow label="Known for" value={PERSON.knownFor} />
         <InfoRow label="Years active" value={PERSON.yearsActive} />
         <InfoRow label="CV" value={<CvActions compact />} />
@@ -65,7 +126,12 @@ export function Infobox() {
         <InfoRow
           label="GitHub"
           value={
-            <a href={`https://${PERSON.github}`} rel="noopener noreferrer" target="_blank">
+            <a
+              href={`https://${PERSON.github}`}
+              rel="noopener noreferrer"
+              target="_blank"
+              className={wiki.link}
+            >
               {PERSON.github}
             </a>
           }
